@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class NotDurchschnitt {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Die Prüfungsnoten der Fächer vom Benutzer erhalten
+        System.out.println("Bitte die Mathepunktzahl eingeben:");
+        int mathe = scanner.nextInt();
+
+        System.out.println("Bitte die Physikpunktzahl eingeben:");
+        int physik = scanner.nextInt();
+
+        System.out.println("Bitte die Chemiepunktzahl eingeben:");
+        int chemie = scanner.nextInt();
+
+        System.out.println("Bitte die Türkischpunktzahl eingeben:");
+        int turkisch = scanner.nextInt();
+
+        System.out.println("Bitte die Geschichtepunktzahl eingeben:");
+        int geschichte = scanner.nextInt();
+
+        System.out.println("Bitte die Musikpunktzahl eingeben:");
+        int musik = scanner.nextInt();
+
+        // Durchschnittsnote berechnen
+        double durchschnitt = (mathe + physik + chemie + turkisch + geschichte + musik) / 6.0;
+
+        // Entscheiden, ob die Klasse bestanden oder nicht bestanden ist, und auf dem Bildschirm anzeigen
+        String klassenstatus = (durchschnitt >= 60) ? "Bestanden" : "Nicht bestanden";
+        System.out.println("Durchschnitt: " + durchschnitt);
+        System.out.println(klassenstatus);
+
+        scanner.close();
+    }
+}
